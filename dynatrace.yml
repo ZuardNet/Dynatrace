@@ -8,10 +8,12 @@
         dest: /tmp/OneAgent.sh
         mode: 0755
     - name: Crear Directorios para Agente
-      ansible.builtin.file:
-      path: "{{item}}"
-      state: directory
-      mode: '0755'
+      file:
+        path: "{{ item }}"
+        state: directory
+        owner: root
+        group: root
+        mode: 0775
       loop:
         - /Dynatrace/var/log/dynatrace
         - /Dynatrace/opt/dynatrace
