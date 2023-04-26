@@ -30,4 +30,5 @@
         - { src: /Dynatrace/var/lib/dynatrace, dest: /var/lib/dynatrace  }
     - name: Instala OneAgent
       become: yes
-      ansible.builtin.script: /tmp/OneAgent.sh > OneAgent.out
+      ansible.builtin.script: 
+        cmd: /tmp/OneAgent.sh > OneAgent.out
