@@ -31,4 +31,4 @@
     - name: Instala OneAgent
       become: yes
       ansible.builtin.script: 
-        cmd: /tmp/OneAgent.sh > OneAgent.out
+        cmd: /tmp/OneAgent.sh
