@@ -1,10 +1,8 @@
 ---
 - hosts: all
-  become: true
-  tasks:
-    - name: download OneAgent
-       get_url:
+   - name: Download OneAgent
+     become: yes
+     get_url:
        url: http://io.zuard.net:32769/api/public/dl/A8VBAFx8
-       dest: /tmp/
-       mode: 0440
-
+       dest: /tmp
+       mode: 0755
