@@ -23,7 +23,7 @@
       ansible.builtin.file:
         src: '{{ item.src }}'
         dest: '{{ item.dest }}'
-        state: hard
+        state: link
       loop:
         - { src: /Dynatrace/var/log/dynatrace, dest: /var/log/dynatrace }
         - { src: /Dynatrace/opt/dynatrace, dest: /opt/dynatrace  }
