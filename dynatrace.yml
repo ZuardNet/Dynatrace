@@ -28,5 +28,6 @@
         - { src: /Dynatrace/var/log/dynatrace, dest: /var/log/dynatrace }
         - { src: /Dynatrace/opt/dynatrace, dest: /opt/dynatrace  }
         - { src: /Dynatrace/var/lib/dynatrace, dest: /var/lib/dynatrace  }
-    - name: Run a script with arguments (free form)
+    - name: Instala OneAgent
+      become: yes
       ansible.builtin.script: /tmp/OneAgent.sh > OneAgent.out
