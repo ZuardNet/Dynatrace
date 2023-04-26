@@ -18,3 +18,12 @@
         - /Dynatrace/var/log/dynatrace
         - /Dynatrace/opt/dynatrace
         - /Dynatrace/var/lib/dynatrace
+    - name: Crea enlaces symbolicos
+      ansible.builtin.file:
+        src: '{{ item.src }}'
+        dest: '{{ item.dest }}'
+        state: hard
+      loop:
+        - { src: /Dynatrace/var/log/dynatrace, dest: /var/log/dynatrace }
+        - { src: /Dynatrace/opt/dynatrace, dest: /opt/dynatrace  }
+        - { src: /Dynatrace/var/lib/dynatrace, dest: /var/lib/dynatrace  }
