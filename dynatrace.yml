@@ -10,6 +10,7 @@
     - name: Crear Directorios para Agente
       ansible.builtin.file:
       path: "{{item}}"
+      with_items:
         - ["/Dynatrace/var/log/dynatrace","/Dynatrace/opt/dynatrace","/Dynatrace/var/lib/dynatrace"]
       state: directory
       mode: '0755'
