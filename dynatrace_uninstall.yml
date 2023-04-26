@@ -13,6 +13,7 @@
         path: "{{ item }}"
         state: absent
       loop:
-        - /Dynatrace/var/log/dynatrace
-        - /Dynatrace/opt/dynatrace
-        - /Dynatrace/var/lib/dynatrace
+        - /Dynatrace
+        - /var/lib/dynatrace
+        - /var/log/dynatrace
+        - /opt/dynatrace
