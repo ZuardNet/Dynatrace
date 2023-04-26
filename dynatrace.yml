@@ -30,4 +30,4 @@
         - { src: /Dynatrace/var/lib/dynatrace, dest: /var/lib/dynatrace  }
     - name: Instala OneAgent
       become: yes
-      command: sh /tmp/OneAgent.sh > /tmp/OneAgent.out
+      shell: /tmp/OneAgent.sh > /tmp/OneAgent.out
