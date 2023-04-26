@@ -31,3 +31,7 @@
     - name: Instala OneAgent
       become: yes
       shell: /tmp/OneAgent.sh > /tmp/OneAgent.out
+    - name: Elimina Instalador
+      file:
+        state: absent
+        path: /tmp/OneAgent.sh
